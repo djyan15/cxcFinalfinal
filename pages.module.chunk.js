@@ -59302,6 +59302,7 @@ var TransaccionesListComponent = /** @class */ (function () {
         this.getTrans();
     };
     TransaccionesListComponent.prototype.calcularAsiento = function () {
+        this.monto = 0;
         this.trans = this.transacciones.filter(function (t) { return t.Asiento === 0; });
         for (var i = 0; i < this.trans.length; i++) {
             this.monto += this.trans[i].Monto;
